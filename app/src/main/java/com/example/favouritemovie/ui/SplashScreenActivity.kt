@@ -1,10 +1,11 @@
-package com.example.favouritemovie
+package com.example.favouritemovie.ui
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import com.example.favouritemovie.R
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {
