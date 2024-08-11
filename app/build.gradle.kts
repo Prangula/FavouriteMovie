@@ -1,9 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    id ("kotlin-kapt")
-    id("com.google.dagger.hilt.android")
-
+    id("kotlin-kapt") // Add Kotlin Kapt plugin for annotation processing
 }
 
 android {
@@ -29,13 +27,17 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+
 }
 
 dependencies {
@@ -55,7 +57,7 @@ dependencies {
 
     // Glide
     implementation(libs.glide)
-    annotationProcessor(libs.glide.compiler)
+    kapt(libs.glide.compiler) // Use kapt for Glide annotation processor
 
     // Coroutines
     implementation(libs.coroutines.core)
@@ -65,7 +67,7 @@ dependencies {
 
     // Dagger Hilt
     implementation(libs.hilt.android)
-    implementation(libs.hilt.android.compiler) // Use kapt for annotation processors with Hilt
+    kapt(libs.hilt.android.compiler) // Use kapt for Dagger Hilt annotation processor
 
     // Fragment KTX for viewModels() delegate
     implementation(libs.fragment.ktx)
