@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="163dp"
+        android:layout_height="226dp"
+        app:cardCornerRadius="16dp"
+        android:backgroundTint="@color/background_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        >
+
+        <ImageView
+            android:layout_width="163.5dp"
+            android:layout_height="190dp"
+            android:src="@drawable/item_image"
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="21dp"
+            tools:text = "Adventure"
+            android:textSize="@dimen/text_item_size"
+            android:textColor="@color/background_color"
+            android:fontFamily="@font/main_font"
+            android:textStyle="bold"
+            android:background="@drawable/category_drawable"
+            android:layout_gravity="end"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            tools:text = "Raiders of the lqdw"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="15dp"
+            android:textSize="@dimen/text_size"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/item_title_text_color"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text = "1981"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="2dp"
+            android:textSize="@dimen/text_published_size"
+            android:textColor="@color/item_published_text_color"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom||end"
+            android:src="@drawable/unfavorite"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="10dp"
+            />
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
